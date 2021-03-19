@@ -1,22 +1,48 @@
-#k_contact_client{
-    margin-left: 10vw;
-    display: flex;
-    justify-content: center;
-    width: 90vw;
-    font-size: 1.3em;
+
+#k_contact_client {
+	width: 90vw;
+	height: 100vh;
+	margin-left: 10vw;
+	margin-right: auto;
+	padding: 10px;
+	background-color: white;
+	color: #191e3f;
 }
-.k_container_contact_client{
-    padding-bottom: 40px;
-}
-#k_contact_client input, #k_contact_client textarea{
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: black;
-}
-#k_contact_client button{
-    background-color: rgb(255, 255, 255);
-    border: none;
+.k_border{
+    border: 2px solid #191e3f;
     padding: 10px;
-    border-radius: 10px;
+    margin: 10px;
+}
+.k_button_supprimer{
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: white;
     cursor: pointer;
+    border-radius: 5px;
+}
+.k_button{
+    padding: 10px;
+    border: none;
+    background-color: rgb(61, 152, 255);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#k_liste_logo{
+    background-color: white;
+    display: none;
+    z-index: 1000;
+    top: 30px;
+    left: 170px;
+    padding: 10px;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid black;
+}
+
+.contactClient{
+    height: 50px;
+    background: white;
 }
