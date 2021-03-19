@@ -1,2 +1,6 @@
 Etienne
 joao
+
+git add .
+git commit -m "nom_de_changement"
+git push origin "ton_prénom"
