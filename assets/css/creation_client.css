@@ -28,10 +28,7 @@
     cursor: pointer;
     border-radius: 5px;
 }
-#k_creation_client input{
-    background-color: rgb(194, 194, 194);
-    border: none;
-}
+
 #k_liste_logo{
     background-color: white;
     display: none;
@@ -42,4 +39,9 @@
     flex-direction: column;
     position: absolute;
     border: 2px solid black;
+}
+
+.creationClient{
+    height: 50px;
+    background: white;
 }
