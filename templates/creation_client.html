@@ -1,84 +1,74 @@
 <div id="k_creation_client">
-    <div style="display: flex; width: 100%;">
-        <div style="display: flex; flex-direction: column; width: 40%; justify-content: space-around;">
-            <div>
-                <div onclick="afficherLogo()" style="cursor: pointer;">
-                    <img src="./assets/images/avatar.png" id="k_logo1" style="width: 100px;">
+    <div class="containeCreationClien">
+        <div onclick="afficherLogo()" style="cursor: pointer;">
+            <img src="./assets/images/avatar.png" id="k_logo1" style="width: 100px;">
+
+        <form class="row form-group col-md-12 g-3 justify-content-center">
+
+            <div class="mb-3 col-9 d-md-flex align-items-center justify-content-between">
+                <label class="form-label col-2">Nom</label>
+                <input type="text" class="form-control" id="last_name" placeholder="Nom" required>
+            </div>
+            <div class="mb-3 col-9 d-md-flex align-items-center justify-content-between">
+                <label class="form-label col-2">Prenom</label>
+                <input class="form-control" id="first_name" required placeholder="Prenom">
+            </div>
+            <div class="mb-3 col-9 d-md-flex align-items-center justify-content-between">
+                <label for="exampleInputEmail1" class="col-2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email" required>
+                <div class="invalid-feedback">E-mail invalide </div>
+            </div>
+            <div class="mb-3 col-9 d-md-flex align-items-center">
+                <label for="numero" class="form-label col-2">Numero</label>
+                <div class="col-12 col-md-5">
+                    <input type="tel" class="form-control" id="telephone" placeholder="Numero"
+                        onkeypress="javascript:return isNumber(event)" pattern="[0-9]">
                 </div>
-                <div id="k_liste_logo" style="cursor: pointer;">
-                    <img src="./assets/images/construction.jpg" onclick="changerLogo2()" id="k_logo2"
-                        style="width: 100px;">
-                    <img src="./assets/images/logo_montauban.jpg" onclick="changerLogo3()" id="k_logo3"
-                        style="width: 100px;">
-                    <img src="./assets/images/montauban_and_fils.png" onclick="changerLogo4()" id="k_logo4"
-                        style="width: 100px;">
+            </div>
+            <div class="mb-3 col-9 d-md-flex align-items-center justify-contente-between">
+                <label class="validationServer01 form-label col-2">Adress</label>
+                <input id="autocomplete" placeholder="Entrer l'adresse" onFocus="geolocate()" type="text"
+                    class="form-control" required>
+            </div>
+            <div id="address" class="col-md-9">
+                <div class="row costumerAdress">
+                    <div class="mb-3 col-md-6 d-md-flex align-items-center justify-contente-between">
+                        <label class="control-label col-4">Numero</label>
+                        <input class="form-control" id="street_number" disabled="true">
+                    </div>
+                    <div class="mb-3 col-md-6 d-md-flex align-items-center justify-contente-between">
+                        <label class="control-label col-4">Adresse</label>
+                        <input class="form-control" id="route" disabled="true">
+                    </div>
+                </div>
+                <div class="row costumerAdress">
+                    <div class="mb-3 col-md-6 d-md-flex align-items-center justify-contente-between">
+                        <label class="control-label col-4">Ville</label>
+                        <input class="form-control field" id="locality" disabled="true">
+                    </div>
+                    <div class="mb-3 col-md-6 d-md-flex align-items-center justify-contente-between">
+                        <label class="control-label col-4">Depart.</label>
+                        <input class="form-control" id="administrative_area_level_1" disabled="true">
+                    </div>
+                </div>
+                <div class="row costumerAdress">
+                    <div class="mb-3 col-md-6 d-md-flex align-items-center justify-contente-between">
+                        <label class="control-label col-4">Code Postal</label>
+                        <input class="form-control" id="postal_code" disabled="true">
+                    </div>
+                    <div class="mb-3 col-md-6 d-md-flex align-items-center justify-contente-between">
+                        <label class="control-label col-4">Pays</label>
+                        <input class="form-control" id="country" disabled="true">
+                    </div>
                 </div>
             </div>
-            <form id="contact_client">
-                <div class="k_border">
-                    <label for="dateCreationClient"><strong>DATE : </strong></label><input type="date"
-                        id="dateCreationClient">
-                </div>
+
+        </form>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            <button type="button" class="btn btn-primary">Confirmer</button>
         </div>
-        <div style="display: flex; flex-direction: column; width: 60%;justify-content: space-around;">
-            <div style="text-align: center;" class="k_border"><strong>FICHE CLIENT</strong></div>
-            <div class="k_border">
-                <label for="nomAdresseCreationClient"><strong>Nom et adresse</strong></label><br>
-                <input type="text" name="nom" id="nomAdresseCreationClient" style="width: 100%; height: 10vh;">
-            </div>
-            <div class="k_border">
-                <strong>TELEPHONES</strong><br>
-                <label for="telFixeCreationClient" style="margin-left: 40px;">Fixe : </label><input type="tel"
-                    id="telFixeCreationClient"><br>
-                <label for="telmobileCreationClient" style="margin-left: 40px;">Mobile : </label><input type="tel"
-                    id="telmobileCreationClient">
-            </div>
-            <div class="k_border">
-                <label for="emailCreationClient"><strong>MAIL </strong></label><input type="email"
-                    id="emailCreationClient" style="width: 300px;">
-            </div>
-        </div>
+
     </div>
-    <div style="width: 100%; display: flex;">
-        <div style="width: 40%;">
-            <div class="k_border">
-                <label for="adresseChantierCreationClient"><strong>Adresse du chantier </strong></label><br>
-                <input id="adresseChantierCreationClient" type="text" style="width: 100%;height: 15vh;">
-            </div>
-        </div>
-        <div style="width: 60%">
-            <div class="k_border">
-                <label for="rdvCreationClient"><strong>Rendez Vous : </strong></label><br>
-                <input id="rdvCreationClient" type="text" style="width: 100%;height: 15vh;">
-            </div>
-        </div>
-    </div>
-    <div style="width: 100%;">
-        <div class="k_border">
-            <label for="projetCreationClient"><strong>PROJET : </strong></label><br>
-            <input type="text" id="projetCreationClient" style="width: 100%; height: 30vh;">
-        </div>
-    </div>
-    <div style="width: 100%;">
-        <div class="k_border">
-            <Strong>Observations : </Strong><br>
-            <input type="checkbox" id="stationnementCreationClient"><label for="stationnementCreationClient">Demande
-                de
-                Stationnement</label><br>
-            <input type="checkbox" id="demandeABFCreationClient"><label for="demandeABFCreationClient">Demande
-                ABF</label><br>
-            <input type="checkbox" id="echafaudageCreationClient"><label for="echafaudageCreationClient">Demande
-                échafaudage</label><br>
-            <input type="checkbox" id="filsElecCreationClient"><label for="filsElecCreationClient">Protection fils
-                électrique</label><br>
-        </div>
-    </div>
-    <div style="width: 100%;">
-        <div class="k_border" style="display: flex; justify-content: space-around;">
-            <button class="k_button_supprimer" type="reset">Supprimer</button>
-            <button class="k_button" type="button" onclick="window.print()">Imprimer</button>
-            <button class="k_button" type="submit">Enregistrer</button>
-        </div>
-    </div>
-    </form>
 </div>
