@@ -41,7 +41,7 @@
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>RDV</td>
+                    <td><a href="checkpoint_final.php">RDV</a></td>
                     <td>0002</td>
                     <td>01/01/2021</td>
                     <td>0002</td>
